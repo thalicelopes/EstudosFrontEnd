@@ -28,7 +28,51 @@
                 var mystring1 = "Estou aprendendo ";
                 var mystring2 = "JavaScript com SoloLearn";
                 document.write(mystring1 + mystring2);
+                
+                TYPES OF LOOPS 
+                FOR, WHILE AND DO WHILE
+
+                for (statement 1; statement 2; statement 3) {
+                    code block to be executed
+                }
+            
+            for(i=0;i<=5;i++){
+                document.write(i, "<h1>Boa tarde</h1>")
+            }
+                WHILE CODE LOOP
+                while(condicao){} 
+                i=0;
+                while(i<10){
+                    document.write("<h1>BOA TARDE A TODOS NÓS</h1>")
+                    i++;
+                }
+
+                DO WHILE LOOP
+                do {
+                    code block
+                }
+                while (condition);
+                var i = 0; 
+                do{
+                    document.write("<h1>Estudando JS</h1>");
+                    i++;
+                }while(i <= 2)
+
+                BREAK STATEMENT
+                for(i=0;i<5;i++){
+                if (i == 2){
+                    break;
+                }
+                document.write("<h1>Estudando</h1>");
+            }
+            Break (Sai de todo loop) vs continue (Skips only one iteration): 
             */
+            for(i=0;i<5;i++){
+                if (i == 2){
+                    continue;
+                }
+                document.write("<h1>Estudando</h1>");
+            }
         </script>
     </head>
     <body>
