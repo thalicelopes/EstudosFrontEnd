@@ -94,16 +94,55 @@
                 document.write("<h1>Estudando</h1>");
             }
             Break (Sai de todo loop) vs continue (Skips only one iteration): 
-            */
+            
+            A JavaScript function is a block of code designed to perform a particular task.
+            The main advantages of using functions:
+            Code reuse: Define the code once, and use it many times.
+            Use the same code many times with different arguments, to produce different results.
+            
             for(i=0;i<5;i++){
                 if (i == 2){
                     continue;
                 }
                 document.write("<h1>Estudando</h1>");
             }
+            Alert, prompt and confirm.
+            Functions can take parameters.
+            Function parameters are the names listed in the function's definition.
+            function funcao(Nome){
+                alert("Olá " + Nome);
+            }
+            funcao("Boa tarde! ");
+            function lalala(x,y){
+                return x * y;
+            }
+            document.write( lalala(5,6) );
+            A prompt box is often used to have the user input a value before entering a page.
+            When a prompt box pops up, the user will have to click either OK or Cancel to proceed after entering the input value.
+            If the user clicks OK, the box returns the input value. If the user clicks Cancel, the box returns null.
+
+            The prompt() method takes two parameters.
+            - The first is the label, which you want to display in the text box.
+            - The second is a default string to display in the text box (optional).
+
+            Example:
+            var nome = prompt("Digite seu nome: ");
+            alert("Seu nome é: " + nome);
+
+            A confirm box is often used to have the user verify or accept something.
+            When a confirm box pops up, the user must click either OK or Cancel to proceed.
+            If the user clicks OK, the box returns true. If the user clicks Cancel, the box returns false.
+            var confirmacao = confirm("Tem certeza que deseja continuar?")
+            if(confirmacao == true){
+                alert("AEEEEEEEE");
+            }
+            else{
+                alert("NHAAAAAAA")
+            }
+            */
+            
         </script>
     </head>
     <body>
-
     </body>
 </html>
