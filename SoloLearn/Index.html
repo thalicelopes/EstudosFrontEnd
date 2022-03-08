@@ -1,148 +1,215 @@
 <html>
-    <head>
-        <script>
-            /*
-                TAG FOR WRITING WORDS IN HTML PAGE, USED FOR TESTING
-                VARIAVEIS:
-                    var x = "BOA TARDE";
-                    document.write(x);
-                change
-                MENSAGEM DE ALERTA: 
-                alert("This is an alert box!");
-                USED TO CREATE MESSAGE BOX!
 
-                BACKLASH (\) -> TRANSFORMS SPECIAL CHARACTERS INTO NORMAL ONES
-                INCREMENT ++ DECREMENT --
-                COMPARISON OPERATOR 
-                VAR NUM = 10
-                Console.log(num == 8);
-                === <- Identical (Equal and same type)
-                !== Not identical
-                
-                IMPORTANT CODE FOR ADDING VALUES TO COMPARISONS
-                var age = 16;
-                var isAdult = (age < 18) ? "Too young": "Old enough";
-                document.write(isAdult);
-                
-                CONCATENATION
-                var mystring1 = "Estou aprendendo ";
-                var mystring2 = "JavaScript com SoloLearn";
-                document.write(mystring1 + mystring2);
+<head>
+    <script>
+        /*
+            TAG FOR WRITING WORDS IN HTML PAGE, USED FOR TESTING
+            VARIAVEIS:
+                var x = "BOA TARDE";
+                document.write(x);
+            change
+            MENSAGEM DE ALERTA: 
+            alert("This is an alert box!");
+            USED TO CREATE MESSAGE BOX!
 
-                case sensitive language
-            if(){}
-            else if(){}
-            else(condition){}
+            BACKLASH (\) -> TRANSFORMS SPECIAL CHARACTERS INTO NORMAL ONES
+            INCREMENT ++ DECREMENT --
+            COMPARISON OPERATOR 
+            VAR NUM = 10
+            Console.log(num == 8);
+            === <- Identical (Equal and same type)
+            !== Not identical
+            
+            IMPORTANT CODE FOR ADDING VALUES TO COMPARISONS
+            var age = 16;
+            var isAdult = (age < 18) ? "Too young": "Old enough";
+            document.write(isAdult);
+            
+            CONCATENATION
+            var mystring1 = "Estou aprendendo ";
+            var mystring2 = "JavaScript com SoloLearn";
+            document.write(mystring1 + mystring2);
+
+            case sensitive language
+        if(){}
+        else if(){}
+        else(condition){}
  
-            switch statement on js
+        switch statement on js
  
-            switch (expression) {
-                case n1: 
-                statements
-                break;
-            case n2: 
-                statements
-                break;
-            default: 
-                statements
+        switch (expression) {
+            case n1: 
+            statements
+            break;
+        case n2: 
+            statements
+            break;
+        default: 
+            statements
 }
-       First Switch Statement.
-        var lalala = 2;
-        switch (lalala){
-            case 1:
-                document.write("ERRO");
-                break;
-            case 2: 
-                document.write("ACERTO");
-                break;
+   First Switch Statement.
+    var lalala = 2;
+    switch (lalala){
+        case 1:
+            document.write("ERRO");
+            break;
+        case 2: 
+            document.write("ACERTO");
+            break;
+    }
+            
+            TYPES OF LOOPS 
+            FOR, WHILE AND DO WHILE
+
+            for (statement 1; statement 2; statement 3) {
+                code block to be executed
+            }
+        
+        for(i=0;i<=5;i++){
+            document.write(i, "<h1>Boa tarde</h1>")
         }
-                
-                TYPES OF LOOPS 
-                FOR, WHILE AND DO WHILE
-
-                for (statement 1; statement 2; statement 3) {
-                    code block to be executed
-                }
-            
-            for(i=0;i<=5;i++){
-                document.write(i, "<h1>Boa tarde</h1>")
+            WHILE CODE LOOP
+            while(condicao){} 
+            i=0;
+            while(i<10){
+                document.write("<h1>BOA TARDE A TODOS NÓS</h1>")
+                i++;
             }
-                WHILE CODE LOOP
-                while(condicao){} 
-                i=0;
-                while(i<10){
-                    document.write("<h1>BOA TARDE A TODOS NÓS</h1>")
-                    i++;
-                }
 
-                DO WHILE LOOP
-                do {
-                    code block
-                }
-                while (condition);
-                var i = 0; 
-                do{
-                    document.write("<h1>Estudando JS</h1>");
-                    i++;
-                }while(i <= 2)
-
-                BREAK STATEMENT
-                for(i=0;i<5;i++){
-                if (i == 2){
-                    break;
-                }
-                document.write("<h1>Estudando</h1>");
+            DO WHILE LOOP
+            do {
+                code block
             }
-            Break (Sai de todo loop) vs continue (Skips only one iteration): 
-            
-            A JavaScript function is a block of code designed to perform a particular task.
-            The main advantages of using functions:
-            Code reuse: Define the code once, and use it many times.
-            Use the same code many times with different arguments, to produce different results.
-            
+            while (condition);
+            var i = 0; 
+            do{
+                document.write("<h1>Estudando JS</h1>");
+                i++;
+            }while(i <= 2)
+
+            BREAK STATEMENT
             for(i=0;i<5;i++){
-                if (i == 2){
-                    continue;
+            if (i == 2){
+                break;
+            }
+            document.write("<h1>Estudando</h1>");
+        }
+        Break (Sai de todo loop) vs continue (Skips only one iteration): 
+        
+        A JavaScript function is a block of code designed to perform a particular task.
+        The main advantages of using functions:
+        Code reuse: Define the code once, and use it many times.
+        Use the same code many times with different arguments, to produce different results.
+        
+        for(i=0;i<5;i++){
+            if (i == 2){
+                continue;
+            }
+            document.write("<h1>Estudando</h1>");
+        }
+        Alert, prompt and confirm.
+        Functions can take parameters.
+        Function parameters are the names listed in the function's definition.
+        function funcao(Nome){
+            alert("Olá " + Nome);
+        }
+        funcao("Boa tarde! ");
+        function lalala(x,y){
+            return x * y;
+        }
+        document.write( lalala(5,6) );
+        A prompt box is often used to have the user input a value before entering a page.
+        When a prompt box pops up, the user will have to click either OK or Cancel to proceed after entering the input value.
+        If the user clicks OK, the box returns the input value. If the user clicks Cancel, the box returns null.
+
+        The prompt() method takes two parameters.
+        - The first is the label, which you want to display in the text box.
+        - The second is a default string to display in the text box (optional).
+
+        Example:
+        var nome = prompt("Digite seu nome: ");
+        alert("Seu nome é: " + nome);
+
+        A confirm box is often used to have the user verify or accept something.
+        When a confirm box pops up, the user must click either OK or Cancel to proceed.
+        If the user clicks OK, the box returns true. If the user clicks Cancel, the box returns false.
+        var confirmacao = confirm("Tem certeza que deseja continuar?")
+        if(confirmacao == true){
+            alert("AEEEEEEEE");
+        }
+        else{
+            alert("NHAAAAAAA")
+        }
+        Don't forget about the second accessing syntax: John['age'].
+            Objetos
+            var course = {name: "SI", periods: 41};
+            alert("Curso: " + course.name + "\nPeríodos: " + course.periods);
+            Object Methods
+
+            An object method is a property that contains a function definition.
+            objectName.methodName()
+
+            Construtor para objeto
+            function person(name, age, color) {
+            this.name = name;
+            this.age = age;
+            this.favColor = color;
                 }
-                document.write("<h1>Estudando</h1>");
-            }
-            Alert, prompt and confirm.
-            Functions can take parameters.
-            Function parameters are the names listed in the function's definition.
-            function funcao(Nome){
-                alert("Olá " + Nome);
-            }
-            funcao("Boa tarde! ");
-            function lalala(x,y){
-                return x * y;
-            }
-            document.write( lalala(5,6) );
-            A prompt box is often used to have the user input a value before entering a page.
-            When a prompt box pops up, the user will have to click either OK or Cancel to proceed after entering the input value.
-            If the user clicks OK, the box returns the input value. If the user clicks Cancel, the box returns null.
+                var ola = new person("Thálice", 40, "Amarelo");
+                document.write(ola.name + "<br/>");
+                document.write(ola.age + "<br/>");
+                document.write(ola.favColor);  
+                function mudanca(nome, idade){
+                    this.nome = nome,
+                    this.idade = idade
+                    this.changename = function (nome){
+                        this.nome = nome;
+                    }
+                }
+                var p = new mudanca("Thálice", 10);
+                document.write(p.nome);
+                p.changename("John");
+                document.write(p.nome);
+                Adição de Métodos: 
+                function person(name, age) {
+                    this.name = name;
+                    this.age = age;
+                    this.yearOfBirth = bornYear;
+                }
+                function bornYear() {
+                    return 2022 - this.age;
+                }
+                var people = new person("Thálice Lopes", 19);
+                document.write(people.name  + "<br/>");
+                document.write(people.age + "<br/>");
+                document.write(people.yearOfBirth() + "<br/>");
 
-            The prompt() method takes two parameters.
-            - The first is the label, which you want to display in the text box.
-            - The second is a default string to display in the text box (optional).
+                declaring arrays
+                var course = new Array();
+                var courses = ["HTML", "CSS", "JS"];
 
-            Example:
-            var nome = prompt("Digite seu nome: ");
-            alert("Seu nome é: " + nome);
+                concat arrays 
+                var c1 = ["HTML", "CSS"];
+                var c2 = ["Js", "C#"];
+                var courses = c1.concat(c2);
+                var person = [];
+                person["Age"] = 19;
+                person["Nome"] = "Thálice";
+                document.write(person["Nome"]);
+                document.write(Math.PI);
+                var number = Math.sqrt(144);
+                document.write(number);
+                Setar tempo para função: 
+                function meuAlerta(){
+                    document.write("Olá!\n");
+                }
+                setInterval(meuAlerta, 3000);
+        */
+        
+    </script>
+</head>
 
-            A confirm box is often used to have the user verify or accept something.
-            When a confirm box pops up, the user must click either OK or Cancel to proceed.
-            If the user clicks OK, the box returns true. If the user clicks Cancel, the box returns false.
-            var confirmacao = confirm("Tem certeza que deseja continuar?")
-            if(confirmacao == true){
-                alert("AEEEEEEEE");
-            }
-            else{
-                alert("NHAAAAAAA")
-            }
-            */
-            
-        </script>
-    </head>
-    <body>
-    </body>
+<body>
+</body>
+
 </html>
