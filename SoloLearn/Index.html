@@ -204,6 +204,112 @@
                     document.write("Olá!\n");
                 }
                 setInterval(meuAlerta, 3000);
+            new Date(milliseconds)
+            new Date(dateString)
+            new Date(year, month, day, hours, minutes, seconds, milliseconds)
+            var d = new Date();
+            document.write(d + "<br/>");
+            var e = d.getHours();
+            document.write(e);
+
+            Função para mostrar a hora:
+            function TempoMostrar(){
+                var d = new Date();
+                var hora = d.getHours();
+                var minuto = d.getMinutes();
+                var segundos = d.getSeconds();
+                document.write(hora + ":" + minuto + ":" + segundos + "<br/>");
+            }
+            setInterval(TempoMostrar, 3000);
+
+            DOM -Document Object Model - an object oriented model of its logical structure.
+            The DOM represents a document as a tree structure.
+            HTML elements become interrelated nodes in the tree.
+
+            document <- predefined object in javascript, root of all objects.
+
+            innerHTML <- object property
+            //finds element by id
+            document.getElementById(id)
+
+            //finds elements by class name
+            document.getElementsByClassName(name)
+
+            //finds elements by tag name
+            document.getElementsByTagName(name)
+            var elem = document.getElementById("demo");
+            Tag Example Code
+            elem.innerHTML = "Hello World!";
+
+        <p>hi</p>
+        <p>hello</p>
+        <p>hi</p>
+        <script>
+            var arr = document.getElementsByTagName("p");
+            for (var x = 0; x < arr.length; x++) {
+                arr[x].innerHTML = "Hi there";
+            }</scri pt>
+
+        Trabalhando com Document Object Model
+
+        element.childNodes returns an array of an element's child nodes.
+        element.firstChild returns the first child node of an element.
+        element.lastChild returns the last child node of an element.
+        element.hasChildNodes returns true if an element has any child nodes, otherwise false.
+        element.nextSibling returns the next node at the same tree level.
+        element.previousSibling returns the previous node at the same tree level.
+        element.parentNode returns the parent node of an element.
+
+        Exemplo em uso:
+        <div id="demo">
+        <p>Textinho</p>
+        <p>Outro textinho</p>
+        </div>
+        <button type="button" onclick="Mudanca()">Clica aqui
+        </button>
+        <script>
+            function Mudanca(){
+                var a = document.getElementById("demo");
+                var arr = a.childNodes;
+                for(i=0;i<arr.length;i++){
+                    arr[i].innerHTML = "OutroTexto";
+                }
+            }
+
+        Mudando atributos com a tag innerHTML.
+        <div id="proibido">
+            <p>Hi</p>
+        </div>
+        script>
+            var p = document.getElementById("proibido");
+            p.innerHTML = "Mudou";
+        <script>
+
+        Mudar estilo da página através do JavaScript
+        <div id="proibido" style="width: 200px;">
+                    <p>Hi</p>
+        </div>
+        <script>
+            var p = document.getElementById("proibido");
+            p.style.color = "6600FF";
+            p.style.width = "10px";
+        <script>
+        Propriedades CSS NÃO PODEM SER REPRESENTADAS COM TRAÇO. Background-Color vira BackgroundColor.
+
+        Criar novos nodes - filhos
+        element.cloneNode() clones an element and returns the resulting node.
+        document.createElement(element) creates a new element node.
+        document.createTextNode(text) creates a new text node.
+        <div id="Teste">
+                </div>
+                script>
+                    var p = document.createElement("p");
+                    var node = document.createTextNode("Olá");
+                    p.appendChild(node);
+                    
+                    var div = document.getElementById("Teste");
+                    div.appendChild(p);
+                <script>
         */
         
     </script>
