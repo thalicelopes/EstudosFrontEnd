@@ -310,6 +310,134 @@
                     var div = document.getElementById("Teste");
                     div.appendChild(p);
                 <script>
+                
+              Remove child node - Example
+
+         <div id="demo">
+            <p id="lala">blablabla</p>
+        </div>
+        <script>
+            var parent = document.getElementById("demo");
+            var child = document.getElementById("lala");
+            parent.removeChild(child);
+
+            Alternative way - parent node
+
+            the parentNode property to get the parent of the element we want to remove:
+            var child = document.getElementById("p1");
+            child.parentNode.removeChild(child);
+         
+            Replacing Elements - Replace Child. Exemplo: 
+            <div id="demo">
+            <p id="lala">blablabla</p>
+        </div>
+        <script>
+            var parent = document.getElementById("demo");
+            var child = document.getElementById("lala");
+            var p = document.createElement("p");
+            var node = document.createTextNode("TEXTO MODIFICADO. ");
+            p.appendChild(node);
+            parent.replaceChild(p, child);
+
+            Creating Animations: 
+
+             <style>
+                #div{
+                    width: 100px;
+                    height: 100px;
+                    background-color: blue;
+                    position: relative;
+                }
+                #childdiv{
+                    width: 20px;
+                    height: 20px;
+                    background-color:red;
+                    position: absolute;
+                }
+            </style>
+            <div id="div">
+                <div id="childdiv"></div>
+            </div>
+            <script>
+                var t = setInterval(move, 500);
+                var pos = 0;
+                var box = document.getElementById("div");
+
+                function move(){
+                    pos += 1;
+                    box.style.left = pos + "px";
+                }
+
+            Parar intervalo de função -> clearInterval - Primeira Animação Js!
+
+             <style>
+            #div{
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                position: relative;
+            }
+            #childdiv{
+                width: 20px;
+                height: 20px;
+                background-color:red;
+                position: absolute;
+            }
+        </style>
+        <div id="div">
+            <div id="childdiv"></div>
+        </div>
+        <script>
+            var pos = 0;
+            var t = setInterval(move, 10);
+            var box = document.getElementById("div");
+
+            function move() {
+                if(pos >= 150) {
+                    clearInterval(t);
+                }
+                else {
+                    pos += 1;
+                    box.style.left = pos+"px";
+                }
+            }
+
+        Event Handler - tipo de função executada quando um evento acontece
+
+        Exemplo - onclick()
+
+        <button type="button" onclick="funcao()">Me clica ae</button>
+        <script>
+            function funcao(){
+                alert("Boa tarde!");
+            }
+
+        Outro Exemplo:
+
+        <button id="Data">
+            LALALA
+        </button>
+        <script>
+            var x = document.getElementById("Data");
+            x.onclick = function () {
+                document.body.innerHTML = Date();
+            }
+
+        Eventos
+
+        onload (Se carregar) vs. onunload (Se não carregar)
+        window.onload = function (){
+            alert("não carregou");
+        }
+
+        onchange:
+
+        <input type="text" id="name" onchange="mudar()">
+        <script>
+            function mudar(){
+                var x = document.getElementById("name");
+                x.value = x.value.toUpperCase();
+            }
         */
         
     </script>
