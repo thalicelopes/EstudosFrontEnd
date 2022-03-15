@@ -523,8 +523,153 @@
         }
 
         EcmaScript - scripting language specification created to standardize JavaScript.
+        
+        Types of variables 
 
-        */
+        var a = 10;
+        const b = 'hello';
+        let c = true;
+
+        Scope is the fundamental concept in all programming languages that defines the visibility of a variable.
+
+        var defines a variable globally, let defines a variable limited in scope to the block.
+
+        exemplo let
+        let a = 2;
+                if(1+1==2){
+                    let a = 1;
+                    document.write(a + "\n");
+                }  
+                document.write(a);
+
+        let é muito usado em loops.
+
+        exemplo const 
+
+        const variables have the same scope as variables declared using let. The difference is that const variables are immutable - they are not allowed to be reassigned.
+
+        Template Literals in ES6
+
+        Template literals are a way to output variables in the string.
+        
+        Example
+
+       let nome = "Letícia";
+       let msg = "Bem vindo" + nome;
+       let msg2 = `Bem vindo ${nome}`;
+       document.write(msg + "<br/>");
+       document.write(msg2);
+       
+       let num = 2;
+       let num2 = 5;
+       let resultado = `${num + num2}`;
+       document.write(resultado);
+
+       let arr = {
+           a: 1, 
+           b: 2, 
+           c: 3
+        };
+        for (let i in arr){
+            document.write(arr[i]);
+        }
+
+        Observação: The for...in loop should NOT be used to iterate over arrays because, 
+        depending on the JavaScript engine, it could iterate in an arbitrary order. 
+        Also, the iterating variable is a string, not a number, so if you try to do any math with the variable,
+        you'll be performing string concatenation instead of addition.
+
+        for...of for iterable objects
+
+        let arr = ["x", "y", "z"];
+        for(let val of arr){
+            document.write(val);
+        }
+
+        ES6 new way of writing functions: 
+
+        var b = 1;
+        var c = 2;
+        const add = (b, c) => {
+            let sum = b + c;
+            document.write(sum);
+        }
+        
+        Shorter code ForEach:
+
+        var arr = [6, 7, 8];
+        arr.forEach(v => {
+            document.write(v * 2 + "<br/>");
+        });
+
+        Default Parameters in ECS6
+
+        const test = (a, b = 3, c = 42) => {
+            return a + b + c;
+        }
+        document.write(test(5));
+
+        Objetos em ECMASCRIPT6:
+
+        let arvore = {
+            altura: 16,
+            tipo: 'Samambaia',
+            crescer() {
+                this.altura *= 2;
+            }
+        };
+        arvore.crescer();
+        document.write(arvore.altura + "<br/>");
+        document.write(arvore.tipo);
+
+        Computer Property names:
+
+        var i = 0;
+        var a = {
+            ['foo' + ++i]: i,
+            ['foo' + ++i]: i,
+            ['foo' + ++i]: i
+        };
+
+        With ES6, you can now use computed property names. 
+        Using the square bracket notation [], we can use an expression for a property name, 
+        including concatenating strings. This can be useful in cases where we want to create certain 
+        objects based on user data (e.g. id, email, and so on).
+        
+        let prop = 'name';
+        let user = {
+            [prop]: "Thálice"
+        }
+        document.write(user.prop);
+
+        Object.assign() in ES6 - Dificuldade
+
+        let pessoa = {
+            nome: 'Thálice',
+            idade: 18,
+            sexo: "MASCULINO"
+        };
+        let estudante = {
+            nome: 'João',
+            idade: 21,
+            Turma: 501
+        };
+        let NovoEstudante = Object.assign({}, pessoa);
+        NovoEstudante.nome = "João"
+        document.write(NovoEstudante.nome);
+
+        const obj1 = {
+                    a: 0,
+                    b: 2,
+                    c: 4
+                };
+                const obj2 = Object.assign({c: 5, d: 6}, obj1);
+                document.write(obj2.c, obj2.d);
+
+        Desestruturação de vetores:
+
+        
+    */
 
     </script>
 
@@ -533,6 +678,7 @@
 <body>
     
 </body>
-    <script>   
+    <script> 
+        
     </script>
 </html>
