@@ -666,9 +666,134 @@
                 const obj2 = Object.assign({c: 5, d: 6}, obj1);
                 document.write(obj2.c, obj2.d);
 
-        Desestruturação de vetores:
-
+        Desestruturação de vetores: - Bacana
         
+            let arr = [1, 2, 3];
+            let [One, two, three] = arr;
+            document.write(One);
+        
+        Simplificação de tarefas e troca de valores
+        
+        let a, b, c = 4, d = 8;
+        [a, b = 6] = [2];
+        [c, d] = [d, c];
+        document.write(a + "<br/>");
+        document.write(b + "<br/>");
+        document.write(c + "<br/>");
+        document.write(d + "<br/>");
+        
+        let obj = {h: 100, s:true};
+        let {h, s} = obj;
+        document.write(h + "<br/>")
+        document.write(s + "<br/>")
+    
+        Rest and Spread Operator
+
+        ... <- Spread Operator
+    
+        Rest Parameters
+
+        function Magic (...nums){
+           let sum = 0;
+           nums.filter(n => n % 2 == 0).map(el => sum+=el);
+           return sum;
+        }
+        document.write(Magic(1,2,3,4,5,6));
+
+        Spread Operator
+        const myfunction = (w, x, y, z) => {
+           document.write(w + x + y + z);
+        }
+        let args = [1, 2, 3];
+        myfunction(...args, 4);
+
+       var datefields = [1970, 0, 1];
+       var date = new Date(...datefields);
+       document.write(date);
+
+       Hardest way: 
+
+       var arr = ["One", "Two", "Five"];
+       arr.splice(2, 0, "Three");
+       arr.splice(3, 0, "Four");
+       document.write(arr);
+
+        Easiest way using ECMASCRIPT6
+
+        let newArr = ['Three', 'Four'];
+        let arr = ['One', 'Two', ...newArr, 'Five'];
+        document.write(arr);
+
+        Classes ECS6:
+
+        In this lesson we'll explain how to create a class that can be 
+        used to create multiple objects of the same structure.
+        A class uses the keyword class and contains a constructor method
+         for initializing.
+
+        var Ret = class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        }
+        const j = new Rectangle(40, 20)
+
+        Class Methods:
+
+        class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+            get area (){ -> getter
+                return this.calcArea();
+            }
+            calcArea(){ -> method
+                return this.width * this.height;
+            }
+        }
+        const ret = new Rectangle (5, 5);
+        document.write(ret.area);
+
+        Static Methods:
+
+        class Point{
+            constructor(x, y){
+                this.x = x;
+                this.y = y;
+            }
+            static distance(a, b){
+                const dx = a.x - b.x;
+                const dy = a.y - b.y;
+                return math.hypot(dx, dy);
+            }
+        }
+        const p1 = new Point(7,2);
+        const p2 = new Point(3,8);
+        console.log(Point.distance(p1, p2));
+
+        Inheritance in ECS6:
+        Extensão de classe:
+
+        class animal{
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                document.write(this.name + " Faz barulho. <br/>");
+            }
+        }
+        class Dog extends animal{
+            speak(){
+                super.speak();
+                document.write(this.name + " late.");
+            }
+        }
+        let Rex = "Rex"
+        let dog = new Dog(Rex);
+        dog.speak();
+
     */
 
     </script>
