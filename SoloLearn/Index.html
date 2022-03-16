@@ -799,6 +799,18 @@
         A Map object can be used to hold key/value pairs. A key or value in a map can be 
         anything (objects and primitive values).
 
+        Map: Keys of any type, you can get the size of a map, higher performance, you can directly iterate on the map:
+
+        Methods: set, get, has, delete, clear, keys, values, entries
+
+        Promise in ECS6 <- ashyncronous programming
+        Iterators and generators:
+
+        Symbol.iterator <- default iterator for a project
+
+
+
+
     */
 
     </script>
@@ -809,6 +821,13 @@
     
 </body>
     <script> 
-        
+        function* idMaker(){
+            let index = 0; 
+            while (index < 5){
+                yield index++;
+            }
+        }
+        var gen = idMaker();
+        document.write(gen.next().value);
     </script>
 </html>
