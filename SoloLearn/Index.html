@@ -808,8 +808,66 @@
 
         Symbol.iterator <- default iterator for a project
 
+        Iterators & Generators
 
+        Symbol.iterator is the default iterator for an object. The for...of loops are based on this type of iterator.
+        In the example below, we will see how we should implement it and how generator functions are used.
 
+        * with the function keyword. It's called a generator function (or gen function).
+
+        Complex Function
+
+        function* idMaker(){
+            let index = 4;
+            while (index < 5) yield index++;
+        }
+        var gen = idMaker();
+        document.write(gen.next().value); 
+
+        Deu certo!
+        const arr = ['0', '1', '4', 'a', '9', 'c', '16', '25'];
+         const my_obj = {
+             [Symbol.iterator]: function*(){
+                for (let index of arr){
+                    document.write(`${index}` + "<br/>");
+                    yield `${index}`;
+                }
+             }
+         };
+         const all = [...my_obj]
+            .map(i => parseInt(i, 10))
+            .map(Math.sqrt)
+            .filter((i) => i < 5)
+            .reduce((i, d) => i + d);
+        document.write("<br/>");
+        document.write(all);
+
+        Modules on ECS6:
+
+        Considerations when using modules:
+        The first consideration is maintainability. A module is independent of other modules, making improvements and expansion possible without any dependency on code in other modules.
+
+        The second consideration is namespacing. In an earlier lesson, we talked about variables and scope. As you know, vars are globally declared, so it's common to have namespace pollution where unrelated variables are accessible all over our code. Modules solve this problem by creating a private space for variables.
+
+        Another important consideration is reusability. When we write code that can be used in other projects, modules make it possible to easily reuse the code without having to rewrite it in a new project.
+
+        Let's see how we should use modules in JS files.
+
+        Built-in Methods
+
+        ES6 also introduced new built-in methods to make several tasks easier. Here we will cover the most common ones.
+
+        const arr = [4, 5, 6, 7, 8].findIndex(x => x > 5);
+        document.write(arr);
+
+        const arr = [4, 5, 6, 7, 8].find(x => x > 5);
+        document.write(arr);
+        
+        document.write("Thálice ".repeat(5));
+        
+        document.write("Thálice".startsWith("Thá") + "<br/>");
+        document.write("Thálice".includes("Thá") + "<br/>");
+        document.write("Thálice".endsWith("lice"));
 
     */
 
@@ -820,14 +878,7 @@
 <body>
     
 </body>
-    <script> 
-        function* idMaker(){
-            let index = 0; 
-            while (index < 5){
-                yield index++;
-            }
-        }
-        var gen = idMaker();
-        document.write(gen.next().value);
+    <script>
+        
     </script>
 </html>
