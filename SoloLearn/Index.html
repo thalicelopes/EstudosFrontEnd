@@ -3,6 +3,8 @@
 <head>
     <script>
         /*
+            JS COMMENTS
+
             TAG FOR WRITING WORDS IN HTML PAGE, USED FOR TESTING
             VARIAVEIS:
                 var x = "BOA TARDE";
@@ -894,8 +896,267 @@
 </head>
 
 <body>
-    
-</body>
-    <script>
-    </script>
+    <!-- KJLSDFGADSF 
+        <ins>OLÁAAAAAAAAA</ins><br/>
+        <del>oláaaaa</del><br/>
+        <sub>OLÁAAAA</sub><br/>
+        <sup>OLÁAAAA</sup>  <br/>
+        <small>OLÁAAAA</small><br/>
+        <big>OLÁAAAA</big><br/>
+
+
+        <a href="https://www.sololearn.com" target="_blank">Learn Playing</a>
+        Abrir em nova janela ou guia
+
+        <pre>
+            Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks
+        </pre>
+
+        Types of Elements
+
+
+            Other elements can be used either as block level elements or inline elements. This includes the following elements:
+            APPLET - embedded Java applet
+            IFRAME - Inline frame
+            INS - inserted text
+            MAP - image map
+            OBJECT - embedded object
+            SCRIPT - script within an HTML document
+
+            Can you insert a block element inside an inline element?
+            No
+
+            The method attribute specifies the HTTP method (GET or POST) to be used when forms are submitted (see below for description):
+                <form action="url" method="GET">
+                <form action="url" method="POST">
+                When you use GET, the form data will be visible in the page address.
+
+                Use POST if the form is updating data, or includes sensitive information (passwords).
+                POST offers better security because the submitted data is not visible in the page address.
+                
+                <form action="https://www.youtube.com/watch?v=EujFSEsZsk4&list=PLDgemkIT111AzoS1rB61sgMJbsEA4pyD2&index=4">
+
+                </form>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                HTML colors are expressed as hexadecimal values.
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fEvM-OUbaKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+                New Elements in HTML5
+<article>, <aside>, <audio>, <canvas>, <datalist>, <details>, <embed>, <footer>, <header>, <nav>, <output>, <progress>, <section>, <video>, and even more!
+
+    The List of Content Models
+
+
+In HTML, elements typically belonged in either the block level or inline content model. HTML5 introduces seven main content models.
+
+        - Metadata
+        - Embedded
+        - Interactive
+        - Heading
+        - Phrasing
+        - Flow
+        - Sectioning
+
+
+<header>- Brandings like logo
+    <nav>Olá!</nav> - navigation section
+</header>
+<article> - web page main content
+    <p>Olá!</p>
+</article>
+<aside>
+    <section> - divided section of main content
+        <p>Olá!</p>
+    </section>
+    <section>
+        <p>Olá!</p>
+    </section>
+</aside> - extra information
+<footer><p>Olá!</p><p>Olá!</p><p>Olá!</p><p>Olá!</p><p>Olá!</p></footer>
+
+<audio></audio> The text between the <audio> and </audio> tags will display in browsers that do not support the <audio> element.
+
+
+
+controls
+Specifies that audio controls should be displayed (such as a play/pause button, etc.)
+
+autoplay
+When this attribute is defined, audio starts playing as soon as it is ready, without asking for the visitor's permission.
+loop
+This attribute is used to have the audio replay every time it is finished.
+<video>
+    <source>
+</video>
+
+With HTML5 web storage, websites can store data on a user's local computer.
+Before HTML5, we had to use JavaScript cookies to achieve this functionality.
+
+The Advantages of Web Storage
+- More secure
+- Faster
+- Stores a larger amount of data
+- Stored data is not sent with every server request
+
+Types of Web Storage Objects
+
+
+There are two types of web storage objects:
+- sessionStorage()
+- localStorage()
+
+Local vs. Session
+- Session Storage is destroyed once the user closes the browser
+- Local Storage stores data with no expiration date
+
+
+
+Working with Values
+
+
+The syntax for web storage for both local and session storage is very simple and similar.
+The data is stored as key/value pairs.
+
+Storing a Value:
+localStorage.setItem("key1", "value1");
+
+Getting a Value:
+//this will print the value
+alert(localStorage.getItem("key1")); 
+
+Removing a Value:
+localStorage.removeItem("key1");
+
+Removing All Values:
+localStorage.clear();
+
+Using HTML Geolocation
+
+
+The Geolocation API’s main method is getCurrentPosition, which retrieves the current geographic location of the user's device.
+navigator.geolocation.getCurrentPosition();
+
+Parameters:
+showLocation (mandatory): Defines the callback method that retrieves location information.
+ErrorHandler(optional): Defines the callback method that is invoked when an error occurs in processing the asynchronous call.
+Options (optional): Defines a set of options for retrieving the location information.
+You need to be familiar with basic JavaScript in order to understand and use the API.
+
+HTML GEOLOCATION <- How to use?
+
+
+<progress min="0" max="100" value="35">
+</progress>
+
+SVG stands for Scalable Vector Graphics, and is used to draw shapes with HTML-style markup.
+
+It offers several methods for drawing paths, boxes, circles, text, and graphic images.
+<img src="./desligado.png" draggable="true">
+    <svg >
+        <circle cx=20 cy=20 r=5 fill="green">
+        </circle>
+        <rect x=20 y=20 fill="green" width=20 height=20>
+
+        </rect>
+        <line>
+
+        </line>
+        <polyline></polyline> 
+    </svg>
+
+    Shape Animations
+
+SVG animations can be created using the <animate> element.
+
+The example below creates a rectangle that will change its position in 3 seconds and will then repeat the animation twice:
+attributeName: Specifies which attribute will be affected by the animation
+from: Specifies the starting value of the attribute
+to: Specifies the ending value of the attribute
+dur: Specifies how long the animation runs (duration)
+fill: Specifies whether or not the attribute's value should return to its initial value when the animation is finished (Values: "remove" resets the value; "freeze" keeps the “to value”)
+repeatCount: Specifies the repeat count of the animation
+
+In the example above, the rectangle changes its x attribute from 0 to 300 in 3 seconds.
+To repeat the animation indefinitely, use the value "indefinite" for the repeatCount attribute.
+
+<svg width=1000 height=500>
+    <rect width=150 height=150 fill="orange">
+        <animate attributeName="x" from="0" to="300" dur="3s" fill="freeze" repeatCount="2">
+        </animate>
+    </rect>
+</svg>
+
+Draw a Line
+moveTo(x,y): Defines the starting point of the line.
+lineTo(x,y): Defines the ending point of the line.
+
+Draw a Circle
+beginPath(): Starts the drawing.
+arc(x,y,r,start,stop): Sets the parameters of the circle.
+stroke(): Ends the drawing.
+
+Gradients
+createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+
+Drawing Text on the Canvas
+Font: Defines the font properties for the text.
+fillText(text,x,y): Draws "filled" text on the canvas.
+strokeText(text,x,y): Draws text on the canvas (no fill).
+
+
+
+     <canvas id="canvas1" width="400" height="300"></canvas> 
+
+   <script>
+      var can = document.getElementById("canvas1"); 
+      var ctx = can.getContext("2d");
+   </script>
+
+   HTML5 added several new input types:
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+New input attributes in HTML5:
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+
+    <input type="text" list="colors"/>
+    <datalist id="colors">
+        <option>lalalalala</option>
+        <option>lolololo</option>
+        <option>lelelele</option>
+    </datalist>
+
+-->
+   </body> 
 </html>
