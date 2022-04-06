@@ -889,14 +889,211 @@
             var x = new Add("hehe", "hoho", "haha", "hihi", "huhu");
             var y = new Add("this", "is", "awesome");
             var z = new Add("lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit");
+
+            Drawing Shapes
+
+            To access the drawing functions, we need to define a context of a 2d canvas.
+            It is done using the following syntax:
+
+
+            context = canvas.getContext("2d"); 
+
+            the stroke() function - it is needed to draw the line.
+
+            Drawing a rectangle is done using the rect() function, which has the following syntax:
+            context.rect(x, y, width, height);
+
+            Arc
+
+
+            To draw a circle, we first need to understand the arc() function.
+            It has the following syntax:
+
+
+            context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise); 
+            
+            centerX and centerY represent the center of the arc.
+            Radius is the size of the arc.
+            startingAngle and endingAngle represent the start/end of the arc in radians.
+
+            Radians
+
+            The angles for the arc are defined in radians.
+            A radian is a unit of measure for angles that is based on the radius of a circle.
+            We can calculate angles with the help of radians and the mathematical constant PI.
+
+            For example:
+            180° is equal to PI * radians.
+
+            Let's draw an arc that is centered at the point (150, 150), starts from the angle 0, ]
+            and spans to the angle 180 (which is equal to PI * radians):
+
+            Practice: Rectangles & Circles
+
+
+            It's time to continue our project! But first, let's repeat how to draw a circle.
+
+            1. arc() function is used to draw a circle. It has 5 required parameters - coordinates that represent the center of the arc, the radius, and the start/end of the arc in radians.
+            2. We can calculate angles with the help of radians and the mathematical constant PI - use Math.Pi.
+
+            Styles
+
+
+            All the shapes we drew only had a thin black outline.
+            That is the default style of the stroke() function.
+
+            We can set the color and width of the stroke using the strokeStyle and lineWidth properties.
+
+            It is recommended to use the fill() function before the stroke() 
+            function in order to render the stroke correctly.
+
+            We can set the font size and family using the font property:
+
+            Images
+
+
+            We can also add images to the canvas.
+            For that, we first need to create an image object in JavaScript and set its source url.
+            In our example, we will use the Sololearn logo, located in the website:
+            var img = new Image();
+            img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg';
+
+            Images
+
+            We can draw the image with any size, different from its original size.
+            This might cause the image to be scaled, which can result in fuzzy or blocky artifacts due to the scaling process
+
+            The canvas automatically uses image smoothing algorithms when scaling images.
+            For example, let's draw our image in a very large size:
+
+            You can disable this feature by setting context.imageSmoothingEnabled = false;
+
+            Animations
+
+            Time to animate!
+            We know how to draw shapes and text on the canvas, but how to move them?
+            The canvas is a drawing board, so once we draw something on it, it stays.
+            In order to move an object, we need to clear the canvas, and redraw the object on its new location.
+            This means that, to create an animation, we need to continuously draw on our canvas, updating the position of our objects.
+
+            Animations
+
+            To call our drawing instructions periodically, we can use the setInterval() or setTimeout() function, which are used to call a function every x milliseconds.
+            For example, let's create a rectangle, and move it horizontally on our canvas.
+            First, let's create a draw() function, that will draw the rectangle at a specified position:
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            var x = 0;
+            var y = 100;
+
+            function draw() {
+            context.beginPath();
+            context.rect(x, y, 100, 100);
+            context.fillStyle="red";
+            context.fill();
+            }
+
+            Animations
+
+            It might seem a bit complex at first, however, creating animations is easy once you get the logic.
+
+            Here are the steps for creating a basic canvas animation:
+            1. clear the canvas.
+            2. draw the objects in their new position.
+            3. update the positions based on the logic.
+            4. repeat the process.
+
+            Here is another simple animation example, which makes a ball bounce in place:
+
+            Game Loops
+
+
+            JavaScript provides a window.requestAnimationFrame() function, which tells the browser
+             that you want to perform a redraw.
+
+            We can use it instead of the setInterval() function, to make the browser take care of the period of
+             redraws, based on the resources of the device it is running on.
+            This means that using the window.requestAnimationFrame() won't hang the browser and will take into 
+            account the system resources when performing the game loop.
     */
-
     </script>
-
 </head>
 
 <body>
-    <!-- KJLSDFGADSF 
+    <canvas id="canvas" width="600" height="400">
+        Não há suporte!
+    </canvas>
+    <script>
+        window.onload = function () {
+            canvas = document.getElementById('canvas');
+            context = canvas.getContext("2d");
+            // context.moveTo(0, 100);
+            // context.lineTo(600, 400);
+            // context.rect(50, 50, 200, 150);
+            // context.arc(300, 200, 150, 0, 2 * Math.PI);
+            // context.lineWidth = 10;
+            // context.strokeStyle = "grey";
+            // context.fillStyle = "black";
+            // context.fill();
+            // context.stroke();
+            // context.beginPath();
+            // context.rect(0, 0, 600, 400);
+            // context.fillStyle = "#FFFFFF";
+            // context.fill();
+            // context.stroke();
+            // context.beginPath();
+            // context.arc(300, 200, 110, 0, 2 * Math.PI);
+            // context.fillStyle = "#de4646";
+            // context.fill();
+            // context.font = '42px Arial';
+            // context.strokeStyle = "black";
+            // context.strokeText("Hello World!", 175, 75);
+            // var img = new Image();
+            // img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg';
+            // img.onload = function () {
+            //     context.drawImage(img, 50, 50, 100, 100);
+            // };
+            // context.stroke();
+            // x = 0;
+            // y = 0;
+            // function draw() {
+            //     context.clearRect(0, 0, 600, 400);
+            //     context.beginPath();
+            //     context.rect(x, y, 100, 100);
+            //     context.fillStyle = "red";
+            //     context.fill();
+            //     x += 10;
+            //     if (x >= 600) {
+            //         x = -100
+            //     }
+            // }
+            // draw();
+            // setInterval(draw, 50);
+            // x = 0;
+            // y = 0;
+            // size = 0;
+            // step = 0;
+            function draw() {
+                context.clearRect(0, 0, 600, 400);
+                context.beginPath();
+                context.arc(0, 0, 150, size, 2 * Math.PI);
+                context.fillStyle = "#FFFFFF";
+                context.fill();
+                context.stroke();
+                size += step;
+                if (size >= 150 || size <= 50) {
+                    step *= -1;
+                }
+                console.log("Hello!");
+            }
+            setInterval(draw, 500);
+
+        }
+    </script>
+</body>
+
+</html>
+<!-- KJLSDFGADSF 
         <ins>OLÁAAAAAAAAA</ins><br/>
         <del>oláaaaa</del><br/>
         <sub>OLÁAAAA</sub><br/>
@@ -1157,6 +1354,13 @@ New input attributes in HTML5:
         <option>lelelele</option>
     </datalist>
 
+    HTML CANVAS
+
+    Drawing using coordinates X, Y
+
+    y
+    |
+    |
+    |
+    |________x
 -->
-   </body> 
-</html>
