@@ -1015,12 +1015,8 @@
              redraws, based on the resources of the device it is running on.
             This means that using the window.requestAnimationFrame() won't hang the browser and will take into 
             account the system resources when performing the game loop.
-    */
-    </script>
-</head>
 
-<body>
-    <canvas id="canvas" width="600" height="400">
+            <canvas id="canvas" width="600" height="400">
         Não há suporte!
     </canvas>
     <script>
@@ -1089,6 +1085,60 @@
             setInterval(draw, 500);
 
         }
+
+         <canvas id="canvas" width="600" height="400">
+        Não há suporte!
+    </canvas>
+    <script>
+        var t;
+        draw();
+        function draw() {
+            canvas = document.getElementById('canvas');
+            context = canvas.getContext("2d");
+            t = Date.now();
+            let timePassed = (Date.now() - t) / 1000; 
+            let fps = Math.round(1 / timePassed); 
+            context.font = '25px Arial';
+            context.fillStyle = 'black';
+            context.fillText("FPS: " + fps, 20, 30);
+            context.fill();
+            context.stroke();
+        } 
+
+        check: Collision Logic
+        Let's implement user input functionality in your project!
+        Here are the events you will use:
+        1. onkeydown is used when any key is pressed on a keyboard.
+        2. ontouchstart is used when the screen is tapped on a mobile device.
+    */
+    </script>
+</head>
+
+<body>
+    <div class="buttons">
+        <button id="up">?</button>
+        <button id="down">?</button>
+        <button id="left">?</button>
+        <button id="right">?</button>
+    </div>
+    <script>
+        let right = document.getElementById('right');
+        right.onmousedown = function () {
+            dir = 1;
+        }
+        right.onmouseup = function () {
+            dir = 0;
+        }
+        right.ontouchstart = function () { //dispositivos touch
+            dir = 1;
+        }
+        right.ontouchend = function () {
+            dir = 0;
+        }
+        if (dir == 1) {
+            x += (speed * timePassed);
+        }
+
     </script>
 </body>
 
