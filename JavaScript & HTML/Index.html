@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+    <div id="start">Start</div>
+</body>
+
+</html>
+<!--Utilizando JQUERY
+
+Sintaxe básica:
+
+    $ - acessa o jQuery
+    ("") - nome, id ou classe do elemento HTML
+    .action - ação
+
+    $("div.menu")  // Todos Elementos div com a classe menu
+
+    $("p:first")  // o primeiro elemento p
+
+    $("h1, p") // todos elementos p e h1
+
+    $("div p") // elementos p filhos de elementos div
+
+    $("*")  // todos os elementos do DOM
+
+    attr() e removeAttr() -> Adicionam e removem atributos
+    html() e text() -> Modificam textos/conteúdos
+
+    val() -> retorna valores de campos de formulário
+
+    Adicionar novo conteúdo sem deletar o existente: 
+
+    append() -> Conteúdo no fim do elemento selecionado
+    prepend() -> insere conteúdo no começo do elemento selecionado
+    after() -> insere conteúdo depois do conteúdo selecionado
+    before() -> insere conteúdo antes do conteúdo selecionado
+
+    addClass -> Método para adicionar classe a um elemento
+    $("div").addClass("header heading");
+
+    removeClass -> Remover classes de um elemento
+    $("div").removeClass("red")
+
+    toggleClass -> Remove/Adiciona classe
+    $("p").toggleClass("red")
+
+    .css -> get/set propriedades css
+    css({"propriedade":"valor","propriedade":"valor",...});
+
+    .width, .height -> métodos para altura e tamanho, sem preenchimento, margem ou borda
+
+    .innerWidth, .innerHeight -> incluem preenchimento
+
+    .outerWidth, .outerHeight -> incluem preenchimento e altura
+
+
+
+-->
+<script type="text/javascript">
+    $(function () {
+        $("#start").html("Go!");
+    });
+</script>
