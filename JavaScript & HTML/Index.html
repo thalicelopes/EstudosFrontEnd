@@ -8,6 +8,26 @@
 
 <body>
     <div id="start">Start</div>
+
+    <p style="color:red">Red</p>
+    <p style="color:green">Green</p>
+    <p style="color:blue">Blue</p>
+
+    <h1>My To-Do List</h1>
+    <input type="text" placeholder="New item" />
+    <button id="add">Add</button>
+    <ol id="mylist">
+
+    </ol>
+
+    <div class="menu">
+        <div id="item">Drop-Down</div>
+        <div id="submenu">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -59,11 +79,70 @@ Sintaxe básica:
 
     .outerWidth, .outerHeight -> incluem preenchimento e altura
 
+    DOM - Document Object Model - Modelo orientado a objetos da estrutura lógica de uma página
 
+    .parent() -> método para alterar o primeiro parente direto do elemento selecionado
+    
+    .parents() -> método para alterar todos os parentes do elemento selecionado
 
+    .children() -> método para alterar todos os filhos do elemento selecionado
+
+    .siblings() ->  método para alterar todos os elementos do mesmo nível do elemento selecionado
+
+    .next/.nextAll -> próximo elemento do mesmo nível do elemento selecionado
+
+    .prev/.prevAll -> elemento anterior do mesmo nível do elemento selecionado
+
+    .eq() -> seleciona um elemento específico de vários elementos selecionados
+    $("div").eq(2);
+
+    .empty() -> remove os filhos do elemento selecionado
+
+    Eventos Click/Hover: click(), dblclick(), mouseenter(), mouseleave(), mouseover
+
+    Eventos Teclado: Keydown(), Keyup()
+
+    Eventos formulário: submit(), change(), focus(), blur()
+
+    Eventos do Documento: ready(), resize(), scroll()
+
+    Em jquery: .on adiciona eventos, .off remove eventos
+    $("p").on("click", function(){
+        alert("clicked");
+    });
+
+    .trigger -> aciona eventos
+
+    .fadeToggle() -> adiciona e remove visão de um elemento
+
+    .slideToggle() -> efeito slide nos elementos
+
+    .animate() -> formato JSON: {key: value} padding-right como key: paddingRight <- importante
 -->
 <script type="text/javascript">
     $(function () {
         $("#start").html("Go!");
     });
+
+    $("p").eq(2).remove();
+
+    $(function () {
+        $("#add").on("click", function () {
+            var val = $("input").val();
+            if (val !== '') {
+                var elem = $("<li></li>").text(val);
+                $(elem).append("<button class='rem'>X</button>");
+                $("#mylist").append(elem);
+                $("input").val(""); //clear the input
+                $(".rem").on("click", function () {
+                    $(this).parent().remove();
+                });
+            }
+        });
+    });
+
+    $("#item").click(function () {
+        $("#submenu").slideToggle(500);
+    });
+    $("#item").animate({ cursor: "pointer" }, 5000);
 </script>
