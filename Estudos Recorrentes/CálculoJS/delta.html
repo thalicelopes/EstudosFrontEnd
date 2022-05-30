@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revenda de Veículo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center my-4">Calculadora de Delta - BHÁSKARA</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <label class="form-label fs-4 mt-1">Digite o valor de A: </label>
+          <input type="text" class="form-control" id="valorA" placeholder="Digite o valor de A">
+
+          <label class="form-label fs-4 mt-1">Digite o valor de B: </label>
+          <input type="text" class="form-control" id="valorB" placeholder="Digite o valor de B">
+
+          <label class="form-label fs-4 mt-1">Digite o valor de C: </label>
+          <input type="text" class="form-control" id="valorC" placeholder="Digite o valor de C">
+
+          <input type="button" value="Checar Resultado" id="btnCalcDelta" onclick="mostrarDelta()"
+            class="btn btn-primary mt-2">
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h2 id="resultadoDelta" class="text-success"></h2>
+      </div>
+    </div>
+  </div>
+  <script src="delta.js"></script>
+</body>
+
+</html>
